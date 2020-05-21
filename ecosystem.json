@@ -1,0 +1,29 @@
+{
+  "apps": [
+    {
+      "name": "api-egg-project",
+      "script": "server.js",
+      "env": {
+        "COMMON_VARIABLE": "true"
+      },
+      "env_production": {
+        "NODE_ENV": "production"
+      }
+    }
+  ],
+  "deploy": {
+    "production": {
+      "user": "staff1",
+      "host": ["39.100.108.192"],
+      "port": "39999",
+      "ref": "origin/master",
+      "repo": "git@github.com:guojingwen/api-egg-project.git",
+      "path": "/www/website/api-egg-project",
+      "ssh_options": "StrictHostKeyChecking=no",
+      "env": {
+        "NODE_ENV": "production"
+      },
+      "post-deploy": "npm i && npm run build && pm2 restart ecosystem.json --env production"
+    }
+  }
+}
