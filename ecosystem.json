@@ -2,7 +2,7 @@
   "apps": [
     {
       "name": "api-egg-project",
-      "script": "server.js",
+      "script": "npm run start",
       "env": {
         "COMMON_VARIABLE": "true"
       },
@@ -23,7 +23,7 @@
       "env": {
         "NODE_ENV": "production"
       },
-      "post-deploy": "npm i && npm run build && pm2 restart ecosystem.json --env production"
+      "post-deploy": "pm2 restart ecosystem.json --env production"
     }
   }
 }
