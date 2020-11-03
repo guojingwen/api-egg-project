@@ -13,7 +13,7 @@
   ],
   "deploy": {
     "production": {
-      "user": "zjy",
+      "user": "gjw",
       "host": ["106.14.247.154"],
       "port": "22",
       "ref": "origin/master",
