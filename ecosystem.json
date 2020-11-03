@@ -14,11 +14,11 @@
   "deploy": {
     "production": {
       "user": "zjy",
-      "host": ["58.240.35.228"],
+      "host": ["106.14.247.154"],
       "port": "22",
       "ref": "origin/master",
       "repo": "git@github.com:guojingwen/api-egg-project.git",
-      "path": "/disk/c/gjw/website/api-egg-project",
+      "path": "/website/api-egg-project",
       "ssh_options": "StrictHostKeyChecking=no",
       "env": {
         "NODE_ENV": "production"
